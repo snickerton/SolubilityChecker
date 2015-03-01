@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Solubility Check! </title>
+</head>
+<body>
+<h1> No one likes work, so I got a computer to help you be lazy. </h1>
+<h3>You're welcome, Tony Zhu. </h3>
+</br>
+<h2 id="output"></h2>
+</body>
+</html>
+<script>
+var noun = ["lamp", "knob", "canoe", "limo", "duck", "sprinkles", "mail", "muffin", "nugget", "tree", "marbles", "fishsticks", "pubes", "face", "hat", "clown", "armor", "helmet", "cup", "tax", "phone", "site","nozzle","noodle"];
+var badWord = ["booby", "dick", "fuck", "bitch", "cunt", "douche", "titty", "ass", "anal", "nipple","vagina"];
+var d = new Date();
+document.getElementById("output").innerHTML = ".... " + badWord[Math.round(Math.random()*(badWord.length-1))] + " "
++ noun[Math.round(Math.random()*(noun.length-1))] + " .";
+console.log( Math.round(4*Math.random()) );
+</script>
+<style type="text/css">
+h2 {
+font-family: "Monotype Corsiva", cursive;
+}
+</style>
