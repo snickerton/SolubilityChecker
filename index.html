@@ -9,8 +9,8 @@
 </br>
 	Cation: <input type="text" id="Cat"><br>
 	Anion:   <input type="text" id="An"><br><br>
-	<input type="button" onclick="submit()" value="Submit">
-<h2 id="output"> Result goes here </h2>
+	<input type="button" onclick="submit()" value="Check Solubility!">
+<h2 id="output">  </h2>
 
 </br>
 </br>
@@ -54,23 +54,23 @@ var inAn = document.getElementById("An").value;
 	out.innerHTML = inCat+ " " +inAn;
 	
 	if(coincides(rule1, inCat)){
-		out.innerHTML = "Soluble (See rule 1)";
+		out.innerHTML = "It's soluble (See rule 1)";
 		return;
 	}
 	if(coincides(rule2, inAn)){
-		out.innerHTML = "Soluble (See rule 2)";
+		out.innerHTML = "Definitely soluble (See rule 2)";
 		return;
 	}
 	if(coincides(rule3p1, inAn) && !coincides(rule3p2, inCat)){
-		out.innerHTML = "Soluble (See rule 3)";
+		out.innerHTML = "Soluble! (See rule 3)";
 		return;
 	}
 	if(coincides(rule4, inAn) && !coincides(rule4exceptions, inCat)){
-		out.innerHTML = "Soluble (See rule 4)";
+		out.innerHTML = "Soluble as can be (See rule 4)";
 		return;
 	}
 	if(coincides(rule5, inAn)){
-		out.innerHTML = "Insoluble (See rule 5)";
+		out.innerHTML = "Definitely Insoluble (See rule 5)";
 		return;
 	}
 	
