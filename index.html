@@ -7,8 +7,8 @@
 	<h1> No one likes work, so I got a computer to help you be lazy. </h1>
 	<h3>You're welcome, Tony Zhu. </h3>
 </br>
-	Cation: <input type="text" name="Cat"><br>
-	Anion:  <input type="text" name="An"><br><br>
+	Cation: <input type="text" id="Cat"><br>
+	Anion:  <input type="text" id="An"><br><br>
 	<input type="button" onclick="submit()" value="Submit">
 <h2 id="output"> Result goes here </h2>
 </body>
@@ -29,8 +29,8 @@ function submit() {
 
 	//var inCat = form.Cat.value;
 	//var inAn = form.An.value;
-var inCat = document.getElementsByName("Cat").value;
-var inAn = document.getElementsByName("An").value;
+var inCat = document.getElementById("Cat").value;
+var inAn = document.getElementById("An").value;
 	var out = document.getElementById("output");
 
 	out.innerHTML = "submit method ran"
