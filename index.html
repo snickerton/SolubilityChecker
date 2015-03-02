@@ -9,7 +9,7 @@
 </br>
 	Cation: <input type="text" id="Cat"><br>
 	Anion:   <input type="text" id="An"><br><br>
-	<input type="button" onclick="submit()" value="Check Solubility!">
+	<input type="button" id = "submitBut" onclick="submit()" value="Check Solubility!">
 <h2 id="output">  </h2>
 
 </br>
@@ -37,7 +37,7 @@ for those compounds formed with silver, mercury, and lead.</p>
 function submit() {
 	var buttonMessages = ["Do the thing!", "Allonsy!", "Open sesame!", "Woot Woot", "#awesome", "Noice", "Shoutout to Mrs. White"];
 	
-	document.getElementById("Cat").value = buttoneMessages[Math.round(Math.random()*(buttonMessages.length-1))];
+	document.getElementById("submitBut").value = buttonMessages[Math.round(Math.random()*(buttonMessages.length-1))];
 	
 	var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH4"];
 	var rule2 = ["C2H3O2", "NO3"];
