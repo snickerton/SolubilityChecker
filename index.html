@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Solubility Check! </title>
+	<title> Solubility Check! </title>
 </head>
 <body>
-<h1> No one likes work, so I got a computer to help you be lazy. </h1>
-<h3>You're welcome, Tony Zhu. </h3>
+	<h1> No one likes work, so I got a computer to help you be lazy. </h1>
+	<h3>You're welcome, Tony Zhu. </h3>
 </br>
 <form id="frm1" action="form_action.asp">
-Cation <input type="text" name="Cat"><br>
-Anion <input type="text" name="An"><br><br>
-<input type="button" onclick="submit(this.form)" value="Submit">
+	Cation: <input type="text" name="Cat"><br>
+	Anion:  <input type="text" name="An"><br><br>
+	<input type="button" onclick="submit(this.form)" value="Submit">
 </form>
-<h2 id="output"></h2>
+<h2 id="output"> Result goes here </h2>
 </body>
 </html>
 
 
 <script>
 function submit(form) {
-  var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH"];
-  var rule2 = 
-  
-  var inCat = form.Cat.value;
-  var inAn = form.An.value;
-  
-  if(rule1.includes(inCat))
-    document.getElementById("output").innerHTML = "Soluble (See rule 1)";
-  if(rule2.includes(inCat))
-    document.getElementById("output").innerHTML = "Soluble (See rule 1)";
+	var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH4"];
+	var rule2 = ["C2H3O2", "NO3"];
+	var rule3p1 = ["Cl", "Br", "I", "At"];
+	var rule3p2 = ["Ag", "Hg", "Pb"];
 
+	var rule4 = ["SO4"];
+	var rule4exceptions = ["Ba", "Sr", "Pb", "Ca", "Ag", "Hg"];
+
+	var rule5 = ["CO3", "OH", "O", "SO3", "PO4", "S", "CrO4"];
+
+	var inCat = form.Cat.value;
+	var inAn = form.An.value;
+
+	var out = document.getElementById("output");
+
+	if(coincides(rule1, inCat)){
+		output.innerHTML = "Soluble (See rule 1)";
+		return;
+	}
+	if(coincides(rule2, inAn)){
+		output.innerHTML = "Soluble (See rule 2)";
+		return;
+	}
+	if(coincides(rule3p1, inAn) && !coincides(rule3p2, inCat)){
+		output.innerHTML = "Soluble (See rule 3)";
+		return;
+	}
+	if(coincides(rule4, inAn) && !coincides(rule4exceptions, inCat)){
+		output.innerHTML = "Soluble (See rule 4)";
+		return;
+	}
+	if(coincides(rule5, inAn)){
+		output.innerHTML = "Soluble (See rule 5)";
+		return;
+	}
+	
+	output.innerHTML = "Insoluble by process of elimination";
+	return;
 }
-</script>
-<style type="text/css">
-h2 {
-font-family: "Monotype Corsiva", cursive;
-}
-</style>
+
+
+function coincides(arr, s){
+	for(var i = 0; i<arr.length; i++){
+		if(alert(s.indexOf(arr[i]) > -1)
+			return true;
+		}
+
+	}
+	</script>
+	<style type="text/css">
+	h2 {
+		font-family: "Monotype Corsiva", cursive;
+	}
+	</style>
