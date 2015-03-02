@@ -10,7 +10,8 @@
 <form id="frm1">
 	Cation: <input type="text" name="Cat"><br>
 	Anion:  <input type="text" name="An"><br><br>
-	<input type="button" onclick="submit(this.form)" value="Submit">
+	//<input type="button" onclick="submit(this.form)" value="Submit">
+	<input type="button" onclick="submit()" value="Submit">
 </form>
 <h2 id="output"> Result goes here </h2>
 </body>
@@ -18,7 +19,7 @@
 
 
 <script>
-function submit(form) {
+function submit() {
 	var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH4"];
 	var rule2 = ["C2H3O2", "NO3"];
 	var rule3p1 = ["Cl", "Br", "I", "At"];
@@ -29,9 +30,10 @@ function submit(form) {
 
 	var rule5 = ["CO3", "OH", "O", "SO3", "PO4", "S", "CrO4"];
 
-	var inCat = form.Cat.value;
-	var inAn = form.An.value;
-
+	//var inCat = form.Cat.value;
+	//var inAn = form.An.value;
+var inCat = document.getElementById("frm1").Cat.value;
+var inAn = document.getElementById("frm1").An.value;
 	var out = document.getElementById("output");
 
 	out.innerHTML = "submit method ran"
