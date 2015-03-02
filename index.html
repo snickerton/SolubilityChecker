@@ -12,15 +12,24 @@ Cation <input type="text" name="Cat"><br>
 Anion <input type="text" name="An"><br><br>
 <input type="button" onclick="submit(this.form)" value="Submit">
 </form>
-  
+<h2 id="output"></h2>
 </body>
 </html>
 
 
 <script>
 function submit(form) {
+  var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH"];
+  var rule2 = 
+  
   var inCat = form.Cat.value;
-  var inAn = form.An.value
+  var inAn = form.An.value;
+  
+  if(rule1.includes(inCat))
+    document.getElementById("output").innerHTML = "Soluble (See rule 1)";
+  if(rule2.includes(inCat))
+    document.getElementById("output").innerHTML = "Soluble (See rule 1)";
+
 }
 </script>
 <style type="text/css">
