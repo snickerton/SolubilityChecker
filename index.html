@@ -7,16 +7,21 @@
 <h1> No one likes work, so I got a computer to help you be lazy. </h1>
 <h3>You're welcome, Tony Zhu. </h3>
 </br>
-<h2 id="output"></h2>
+<form id="frm1" action="form_action.asp">
+Cation <input type="text" name="Cat"><br>
+Anion <input type="text" name="An"><br><br>
+<input type="button" onclick="submit(this.form)" value="Submit">
+</form>
+  
 </body>
 </html>
+
+
 <script>
-var noun = ["lamp", "knob", "canoe", "limo", "duck", "sprinkles", "mail", "muffin", "nugget", "tree", "marbles", "fishsticks", "pubes", "face", "hat", "clown", "armor", "helmet", "cup", "tax", "phone", "site","nozzle","noodle"];
-var badWord = ["booby", "dick", "fuck", "bitch", "cunt", "douche", "titty", "ass", "anal", "nipple","vagina"];
-var d = new Date();
-document.getElementById("output").innerHTML = ".... " + badWord[Math.round(Math.random()*(badWord.length-1))] + " "
-+ noun[Math.round(Math.random()*(noun.length-1))] + " .";
-console.log( Math.round(4*Math.random()) );
+function submit(form) {
+  var inCat = form.Cat.value;
+  var inAn = form.An.value
+}
 </script>
 <style type="text/css">
 h2 {
