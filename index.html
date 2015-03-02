@@ -7,20 +7,15 @@
 	<h1> No one likes work, so I got a computer to help you be lazy. </h1>
 	<h3>You're welcome, Tony Zhu. </h3>
 </br>
-<form id="frm1">
 	Cation: <input type="text" name="Cat"><br>
 	Anion:  <input type="text" name="An"><br><br>
 	<input type="button" onclick="submit()" value="Submit">
-</form>
 <h2 id="output"> Result goes here </h2>
 </body>
 </html>
 
 
 <script>
-	var out = document.getElementById("output");
-
-	out.innerHTML = "script method ran"
 function submit() {
 	var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH4"];
 	var rule2 = ["C2H3O2", "NO3"];
@@ -34,8 +29,9 @@ function submit() {
 
 	//var inCat = form.Cat.value;
 	//var inAn = form.An.value;
-var inCat = document.getElementById("frm1").Cat.value;
-var inAn = document.getElementById("frm1").An.value;
+var inCat = document.getElementByName("Cat").value;
+var inAn = document.getElementByName("An").value;
+	var out = document.getElementById("output");
 
 	out.innerHTML = "submit method ran"
 	
