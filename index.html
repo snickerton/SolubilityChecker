@@ -35,6 +35,8 @@ for those compounds formed with silver, mercury, and lead.</p>
 
 <script>
 function submit() {
+	var buttonMessages = ["Do the thing!", "Allonsy!", "Open sesame!", "Woot Woot", "#awesome", "Noice", "Shoutout to Mrs. White"];
+	
 	var rule1 = ["H", "Li", "Na", "K", "Rb", "Cs", "Fr", "NH4"];
 	var rule2 = ["C2H3O2", "NO3"];
 	var rule3p1 = ["Cl", "Br", "I", "At"];
@@ -47,8 +49,8 @@ function submit() {
 
 	//var inCat = form.Cat.value;
 	//var inAn = form.An.value;
-var inCat = document.getElementById("Cat").value;
-var inAn = document.getElementById("An").value;
+	var inCat = document.getElementById("Cat").value;
+	var inAn = document.getElementById("An").value;
 	var out = document.getElementById("output");
 
 	out.innerHTML = inCat+ " " +inAn;
