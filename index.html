@@ -35,27 +35,27 @@ function submit(form) {
 	var out = document.getElementById("output");
 
 	if(coincides(rule1, inCat)){
-		output.innerHTML = "Soluble (See rule 1)";
+		out.innerHTML = "Soluble (See rule 1)";
 		return;
 	}
 	if(coincides(rule2, inAn)){
-		output.innerHTML = "Soluble (See rule 2)";
+		out.innerHTML = "Soluble (See rule 2)";
 		return;
 	}
 	if(coincides(rule3p1, inAn) && !coincides(rule3p2, inCat)){
-		output.innerHTML = "Soluble (See rule 3)";
+		out.innerHTML = "Soluble (See rule 3)";
 		return;
 	}
 	if(coincides(rule4, inAn) && !coincides(rule4exceptions, inCat)){
-		output.innerHTML = "Soluble (See rule 4)";
+		out.innerHTML = "Soluble (See rule 4)";
 		return;
 	}
 	if(coincides(rule5, inAn)){
-		output.innerHTML = "Soluble (See rule 5)";
+		out.innerHTML = "Soluble (See rule 5)";
 		return;
 	}
 	
-	output.innerHTML = "Insoluble by process of elimination";
+	out.innerHTML = "Insoluble by process of elimination";
 	return;
 }
 
